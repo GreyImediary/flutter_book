@@ -9,6 +9,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MainScreen(),
+      },
       title: 'Flutter Demo',
       theme: ThemeData(
         accentColor: Color(0xff75abf1),
@@ -21,6 +25,7 @@ class MyApp extends StatelessWidget {
           ),
           headline6: TextStyle(
             color: Color(0xff75abf1),
+            fontSize: 18,
             fontWeight: FontWeight.bold
           ),
           bodyText2: TextStyle(
@@ -28,7 +33,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: MainScreen(),
     );
   }
 }

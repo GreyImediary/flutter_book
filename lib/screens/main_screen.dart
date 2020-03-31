@@ -1,7 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_book/widgets/main_screen_widgets/widget_category.dart';
 
 class MainScreen extends StatefulWidget {
+  final categories = [
+    Category('Accessibility', 'Make your app accessible.', '/accessibility', "accessibility"),
+    Category('Animation and Motion', 'Bring animations to your app.', '/animmotion', "animmotion"),
+    Category('Assets, Images, Icons', 'Manage assets, display images, and show icons.', '/aii', "aii"),
+    Category('Async', 'Async patterns to your Flutter application.', '/async', "async"),
+    Category('Basics', 'Basics elements needed in every app.', '/basics', "basics"),
+    Category('Cupertino', 'Widgets for iOS design language.', '/cupertino', "cupertino"),
+    Category('Input', 'Take user input in addition to input widgets.', '/input', "input"),
+    Category('Interaction Models', 'Respond to touch events.', '/interaction', "interaction"),
+    Category('Layout', 'Arrange other widgets columns, rows, grid and many other.', '/layout', "layout"),
+    Category('Material Components', 'Widgets implementing the Material Design.', '/material', "material"),
+    Category('Painting and effects', 'Apply visaul effect to widgets or create your own.', '/painting', "painting"),
+    Category('Scrolling', 'Scroll multiple widgets as children of the parent.', '/scrolling.', "scrolling."),
+    Category('Styling', 'Manage the theme of your app.', '/styling', "styling"),
+    Category('Text', 'Display and style text.', '/text', "text")
+  ];
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -41,9 +58,7 @@ class _MainScreenState extends State<MainScreen> {
                   shrinkWrap: true,
                   controller: _controller,
                   crossAxisCount: 2,
-                  children: <Widget>[
-
-                  ],
+                  children: widget.categories
                 )
               ],
             ),

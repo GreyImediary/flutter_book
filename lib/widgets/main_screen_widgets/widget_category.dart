@@ -5,8 +5,9 @@ class Category extends StatelessWidget {
   final String title;
   final String desc;
   final String route;
+  final String heroTag;
 
-  Category(this.title, this.desc, this.route);
+  Category(this.title, this.desc, this.route, this.heroTag);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class Category extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
-          onTap: () {},
+          onTap: () => _toWidgetScreen(context),
           child: Container(
             child: Stack(
               children: <Widget>[
@@ -37,6 +38,8 @@ class Category extends StatelessWidget {
     );
   }
 
+  _toWidgetScreen(BuildContext context) => Navigator.pushNamed(context, route);
+
   Widget _categoryTitleDesc(BuildContext context) => Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 12,
@@ -45,9 +48,12 @@ class Category extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              title,
-              style: Theme.of(context).textTheme.headline6,
+            Hero(
+              tag: heroTag,
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.headline6,
+              ),
             ),
             Container(
               height: 5,
@@ -67,7 +73,7 @@ class Category extends StatelessWidget {
           bottomRight: Radius.circular(10),
         ),
         child: InkWell(
-          onTap: () {},
+          onTap: () => _toWidgetScreen(context),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(10),
             bottomRight: Radius.circular(10),
