@@ -11,19 +11,30 @@ class WidgetItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: Material(
-        color: Theme
-            .of(context)
-            .primaryColorDark,
+        color: Theme.of(context).primaryColorDark,
         borderRadius: BorderRadius.circular(10),
         child: InkWell(
             borderRadius: BorderRadius.circular(10),
-            onTap: () => Navigator.of(context).pushNamed(data.route),
+            onTap: () {
+              try {
+                Navigator.of(context).pushNamed(data.route);
+              } on Error {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Widget description will be added soon'),
+                    action: SnackBarAction(label: 'OK', onPressed: () {
+                      Scaffold.of(context).hideCurrentSnackBar();
+                    }),
+                  ),
+                );
+              }
+            },
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Flexible(
-                  flex: 3,
+                  flex: 4,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12,
@@ -37,21 +48,15 @@ class WidgetItem extends StatelessWidget {
                           tag: data.heroTag,
                           child: Text(
                             data.title,
-                            style:
-                            Theme
-                                .of(context)
-                                .textTheme
-                                .headline6,
+                            style: Theme.of(context).textTheme.headline6,
                           ),
                         ),
-                        Container(height: 8,),
+                        Container(
+                          height: 8,
+                        ),
                         Text(
                           data.desc,
-                          style:
-                          Theme
-                              .of(context)
-                              .textTheme
-                              .bodyText2,
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
                       ],
                     ),
@@ -62,16 +67,10 @@ class WidgetItem extends StatelessWidget {
                     child: Center(
                       child: Icon(
                         Icons.play_arrow,
-                        size: MediaQuery
-                            .of(context)
-                            .size
-                            .width / 10,
-                        color: Theme
-                            .of(context)
-                            .accentColor,
+                        size: MediaQuery.of(context).size.width / 10,
+                        color: Theme.of(context).accentColor,
                       ),
-                    )
-                )
+                    ))
               ],
             )),
       ),

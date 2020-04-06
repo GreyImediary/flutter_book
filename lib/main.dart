@@ -14,11 +14,27 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MainScreen(),
-        '/accessibility': (context) =>
-            CategoryScreen('Accessibility', 'accessibility', [
-              WidgetData('Test', 'desc', 'route', 'heroTag'),
-              WidgetData('Test', 'desc', 'route', 'heroTag1')
-            ])
+        '/accessibility': (context) => CategoryScreen(
+              'Accessibility',
+              'accessibility',
+              widgetData['Accessibility'],
+            ),
+        '/animmotion': (context) => CategoryScreen(
+              'Animation and motion',
+              'animmotion',
+              widgetData['Animation and motion'],
+            ),
+        '/aii': (context) => CategoryScreen(
+              'Assets, images, and icon',
+              'aii',
+              widgetData['Assets, images, and icon'],
+            ),
+        '/async': (context) => CategoryScreen(
+              'Async',
+              'async',
+              widgetData['Async'],
+            ),
+        '/basics': (context) => CategoryScreen('Basics', 'basics', widgetData['Basics'])
       },
       title: 'Flutter Demo',
       theme: ThemeData(
