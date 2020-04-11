@@ -34,7 +34,16 @@ class MyApp extends StatelessWidget {
               'async',
               widgetData['Async'],
             ),
-        '/basics': (context) => CategoryScreen('Basics', 'basics', widgetData['Basics'])
+        '/basics': (context) => CategoryScreen('Basics', 'basics', widgetData['Basics']),
+        '/input': (context) => CategoryScreen('Input', 'input', widgetData['Input']),
+        '/interaction': (context) => CategoryScreen('Interaction model', 'interaction', widgetData['Interaction']),
+        '/painting': (context) => CategoryScreen("Paiting and effects", 'painting', widgetData['Painting']),
+        '/styling': (context) => CategoryScreen("Styling", 'styling', widgetData['Styling']),
+        '/text': (context) => CategoryScreen('Text', 'text', widgetData['Text']),
+        '/scrolling': (context) => CategoryScreen('Scrolling', 'scrolling', widgetData['Scrolling']),
+        '/cupertino': (context) => CategoryScreen('Cupertino', 'cupertino', widgetData['Cupertino']),
+        '/layout': (context) => CategoryScreen('Layout', 'layout', widgetData['Layout']),
+        '/material': (context) => CategoryScreen('Material Components', 'material', widgetData['Material']),
       },
       title: 'Flutter Demo',
       theme: ThemeData(

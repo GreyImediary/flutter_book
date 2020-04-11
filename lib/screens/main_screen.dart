@@ -15,7 +15,7 @@ class MainScreen extends StatefulWidget {
     Category('Layout', 'Arrange other widgets columns, rows, grid and many other.', '/layout', "layout"),
     Category('Material Components', 'Widgets implementing the Material Design.', '/material', "material"),
     Category('Painting and effects', 'Apply visaul effect to widgets or create your own.', '/painting', "painting"),
-    Category('Scrolling', 'Scroll multiple widgets as children of the parent.', '/scrolling.', "scrolling."),
+    Category('Scrolling', 'Scroll multiple widgets as children of the parent.', '/scrolling', "scrolling."),
     Category('Styling', 'Manage the theme of your app.', '/styling', "styling"),
     Category('Text', 'Display and style text.', '/text', "text")
   ];
