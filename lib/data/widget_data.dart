@@ -10,7 +10,7 @@ class WidgetData {
 
 final widgetData = {
   'Accessibility': [
-    WidgetData('ExcludeSemantics', 'A widget that drops all the semantics of its descendants.', '/  ExcludeSemantics', 'ExcludeSemantics'),
+    WidgetData('ExcludeSemantics', 'A widget that drops all the semantics of its descendants.', '/ExcludeSemantics', 'ExcludeSemantics'),
     WidgetData('MergeSemantics', 'A widget that merges the semantics of its descendants.', '/MergeSemantics', 'MergeSemantics'),
     WidgetData('Semantics', 'A widget that annotates the widget tree with a description of the meaning of the widgets.', '/Semantics', 'Semantics')
   ],

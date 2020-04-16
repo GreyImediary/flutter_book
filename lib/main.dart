@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book/data/widget_data.dart';
 import 'package:flutter_book/screens/category_screen.dart';
-import 'package:flutter_book/screens/main_screen.dart';
+import 'package:flutter_book/screens/widget_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => MainScreen(),
+        '/': (context) => WidgetScreen(),
         '/accessibility': (context) => CategoryScreen(
               'Accessibility',
               'accessibility',
@@ -50,6 +50,10 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xff75abf1),
         scaffoldBackgroundColor: Colors.black,
         primaryColorDark: Color(0xff1d1d1d),
+        cardColor: Color(0xff1d1d1d),
+        canvasColor: Color(0xff1d1d1d),
+        unselectedWidgetColor: Color(0xff75abf1),
+        dividerColor: Color(0xff353535),
         textTheme: TextTheme(
           headline4:
               TextStyle(color: Color(0xffdddddd), fontWeight: FontWeight.bold),
