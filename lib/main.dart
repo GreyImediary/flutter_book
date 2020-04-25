@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_book/data/widget_data.dart';
 import 'package:flutter_book/screens/category_screen.dart';
 import 'package:flutter_book/screens/main_screen.dart';
+import 'package:flutter_book/widgets/material_widgets/image.dart';
 import 'package:flutter_book/widgets/material_widgets/tooltip.dart';
 
 void main() {
@@ -46,7 +47,8 @@ class MyApp extends StatelessWidget {
         '/layout': (context) => CategoryScreen('Layout', 'layout', widgetData['Layout']),
         '/material': (context) => CategoryScreen('Material Components', 'material', widgetData['Material']),
 
-        '/Tooltip': (context) => TooltipWidget()
+        '/Tooltip': (context) => TooltipWidget(),
+        '/Image': (context) => ImageWidget(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(

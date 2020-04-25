@@ -17,8 +17,7 @@ Widget tooltipDescription(BuildContext context) {
             text: 'text labels ', style: Theme.of(context).textTheme.bodyText1),
         TextSpan(
             text:
-                'that help explain the function of a button or other user interface '),
-        TextSpan(text: 'action. Wrap the button in a '),
+                'that help explain the function of a button or other user interface action. Wrap the button in a '),
         TextSpan(
             text: 'Tooltip widget ',
             style: Theme.of(context).textTheme.bodyText1),
