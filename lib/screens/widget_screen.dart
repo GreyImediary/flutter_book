@@ -2,6 +2,23 @@ import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 
 class WidgetScreen extends StatelessWidget {
+  final String heroTag;
+  final String title;
+  final Widget description;
+  final Widget goal;
+  final Widget code;
+  final Widget tricks;
+  final Widget example;
+
+  WidgetScreen(
+      {@required this.heroTag,
+      @required this.title,
+      @required this.description,
+      @required this.goal,
+      @required this.code,
+      @required this.tricks,
+      @required this.example});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +32,9 @@ class WidgetScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 8),
                 child: Hero(
-                  tag: '',
+                  tag: heroTag,
                   child: Text(
-                    'Widget title',
+                    title,
                     style: Theme.of(context).textTheme.headline4,
                   ),
                 ),
@@ -25,15 +42,23 @@ class WidgetScreen extends StatelessWidget {
               Container(
                 height: 40,
               ),
-              buildDescription(context),
-              Container(height: 16,),
-              buildGoal(context),
-              Container(height: 16,),
-              buildCode(context),
-              Container(height: 16,),
-              buildTricks(context),
-              Container(height: 16,),
-              buildExample(context),
+              _buildDescription(context),
+              Container(
+                height: 16,
+              ),
+              _buildGoal(context),
+              Container(
+                height: 16,
+              ),
+              _buildCode(context),
+              Container(
+                height: 16,
+              ),
+              /*_buildTricks(context),
+              Container(
+                height: 16,
+              ),*/
+              _buildExample(context),
             ],
           ),
         ),
@@ -41,10 +66,10 @@ class WidgetScreen extends StatelessWidget {
     );
   }
 
-  Widget buildDescription(BuildContext context) {
+  Widget _buildDescription(BuildContext context) {
     return ExpansionTileCard(
       borderRadius: BorderRadius.circular(5),
-      title: buildTitle(context, 'Description', Icons.description),
+      title: _buildTitle(context, 'Description', Icons.description),
       children: <Widget>[
         Divider(),
         Container(
@@ -54,16 +79,16 @@ class WidgetScreen extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(5),
                   bottomLeft: Radius.circular(5))),
-          child: Column(),
+          child: description,
         ),
       ],
     );
   }
 
-  Widget buildGoal(BuildContext context) {
+  Widget _buildGoal(BuildContext context) {
     return ExpansionTileCard(
       borderRadius: BorderRadius.circular(5),
-      title: buildTitle(context, 'Goal', Icons.lightbulb_outline),
+      title: _buildTitle(context, 'Goal', Icons.lightbulb_outline),
       children: <Widget>[
         Divider(),
         Container(
@@ -73,16 +98,16 @@ class WidgetScreen extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(5),
                   bottomLeft: Radius.circular(5))),
-          child: Column(),
+          child: goal,
         ),
       ],
     );
   }
 
-  Widget buildCode(BuildContext context) {
+  Widget _buildCode(BuildContext context) {
     return ExpansionTileCard(
       borderRadius: BorderRadius.circular(5),
-      title: buildTitle(context, 'Code', Icons.code),
+      title: _buildTitle(context, 'Code', Icons.code),
       children: <Widget>[
         Divider(),
         Container(
@@ -92,16 +117,16 @@ class WidgetScreen extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(5),
                   bottomLeft: Radius.circular(5))),
-          child: Column(),
+          child: code,
         ),
       ],
     );
   }
 
-  Widget buildTricks(BuildContext context) {
+  Widget _buildTricks(BuildContext context) {
     return ExpansionTileCard(
       borderRadius: BorderRadius.circular(5),
-      title: buildTitle(context, 'Tricks', Icons.flash_on),
+      title: _buildTitle(context, 'Tricks', Icons.flash_on),
       children: <Widget>[
         Divider(),
         Container(
@@ -111,17 +136,16 @@ class WidgetScreen extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(5),
                   bottomLeft: Radius.circular(5))),
-          child: Column(),
+          child: tricks,
         ),
       ],
     );
   }
 
-
-  Widget buildExample(BuildContext context) {
+  Widget _buildExample(BuildContext context) {
     return ExpansionTileCard(
       borderRadius: BorderRadius.circular(5),
-      title: buildTitle(context, 'Example', Icons.image),
+      title: _buildTitle(context, 'Example', Icons.image),
       children: <Widget>[
         Divider(),
         Container(
@@ -131,13 +155,13 @@ class WidgetScreen extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(5),
                   bottomLeft: Radius.circular(5))),
-          child: Column(),
+          child: example,
         ),
       ],
     );
   }
 
-  Widget buildTitle(BuildContext context, String titleText, IconData icon) {
+  Widget _buildTitle(BuildContext context, String titleText, IconData icon) {
     return Row(
       children: <Widget>[
         Icon(
@@ -148,8 +172,9 @@ class WidgetScreen extends StatelessWidget {
           width: 8,
         ),
         Text(
-            titleText,
-            style: Theme.of(context).textTheme.headline6,),
+          titleText,
+          style: Theme.of(context).textTheme.headline6,
+        ),
       ],
     );
   }
