@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book/data/widget_data.dart';
 import 'package:flutter_book/screens/category_screen.dart';
-import 'package:flutter_book/screens/widget_screen.dart';
+import 'package:flutter_book/screens/main_screen.dart';
+import 'package:flutter_book/widgets/material_widgets/tooltip.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => WidgetScreen(),
+        '/': (context) => MainScreen(),
         '/accessibility': (context) => CategoryScreen(
               'Accessibility',
               'accessibility',
@@ -44,6 +45,8 @@ class MyApp extends StatelessWidget {
         '/cupertino': (context) => CategoryScreen('Cupertino', 'cupertino', widgetData['Cupertino']),
         '/layout': (context) => CategoryScreen('Layout', 'layout', widgetData['Layout']),
         '/material': (context) => CategoryScreen('Material Components', 'material', widgetData['Material']),
+
+        '/Tooltip': (context) => TooltipWidget()
       },
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -52,6 +55,7 @@ class MyApp extends StatelessWidget {
         primaryColorDark: Color(0xff1d1d1d),
         cardColor: Color(0xff1d1d1d),
         canvasColor: Color(0xff1d1d1d),
+        primaryColorLight: Color(0xff4a4a4a),
         unselectedWidgetColor: Color(0xff75abf1),
         dividerColor: Color(0xff353535),
         textTheme: TextTheme(
@@ -62,6 +66,7 @@ class MyApp extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.bold),
           bodyText2: TextStyle(color: Color(0xfff2f2f2)),
+          bodyText1: TextStyle(color: Color(0xfff77a06)),
         ),
       ),
     );
