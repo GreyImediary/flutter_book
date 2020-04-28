@@ -139,7 +139,7 @@ class TooltipWidget extends StatelessWidget {
       description: tooltipDescription(context),
       goal: tooltipGoal(context),
       code: tooltipCode(context),
-      tricks: Container(),
+      tricks: null,
       example: tooltipExample(context),
     );
   }

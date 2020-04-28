@@ -68,10 +68,10 @@ Widget imageCode(BuildContext context) {
             TextSpan(text: 'All you need to do is implement '),
             TextSpan(
                 text: 'Image', style: Theme.of(context).textTheme.bodyText1),
-            TextSpan(text: 'to a parent and provide '),
+            TextSpan(text: 'to a parent widget and provide '),
             TextSpan(
                 text: 'image', style: Theme.of(context).textTheme.bodyText1),
-            TextSpan(text: 'attribute as '),
+            TextSpan(text: 'property as '),
             TextSpan(
                 text: 'NetworkImage',
                 style: Theme.of(context).textTheme.bodyText1),
@@ -122,7 +122,7 @@ Widget imageCode(BuildContext context) {
                 style: Theme.of(context).textTheme.bodyText1),
             TextSpan(text: ', '),
             TextSpan(
-                text: 'Image.memory ',
+                text: 'Image.memory',
                 style: Theme.of(context).textTheme.bodyText1),
             TextSpan(text: ', '),
             TextSpan(text: 'constructors'),
@@ -152,7 +152,7 @@ class ImageWidget extends StatelessWidget {
       description: imageDescription(context),
       goal: imageGoal(context),
       code: imageCode(context),
-      tricks: Container(),
+      tricks: null,
       example: imageExample(),
     );
   }
