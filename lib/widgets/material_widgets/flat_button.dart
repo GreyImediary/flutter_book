@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book/screens/widget_screen.dart';
+import 'package:flutter_book/widgets/widget_code_block.dart';
 
 final flatButtonCodeText = """
 FlatButton(
@@ -35,7 +36,9 @@ Widget flatButtonGoal(BuildContext context) {
     text: TextSpan(
       style: Theme.of(context).textTheme.bodyText2,
       children: [
-        TextSpan(text: "The main goal of flat button (as well as other buttons) is to "),
+        TextSpan(
+            text:
+                "The main goal of flat button (as well as other buttons) is to "),
         TextSpan(
             text: 'trigger events ',
             style: Theme.of(context).textTheme.bodyText1),
@@ -48,7 +51,8 @@ Widget flatButtonGoal(BuildContext context) {
             style: Theme.of(context).textTheme.bodyText1),
         TextSpan(text: "so that the button's presence is obvious. "),
         TextSpan(
-            text: 'You can use flat button where common raised button or outline button looks '),
+            text:
+                'You can use flat button where common raised button or outline button looks '),
         TextSpan(
             text: 'unnaturaly.', style: Theme.of(context).textTheme.bodyText1),
       ],
@@ -81,20 +85,7 @@ Widget flatButtonCode(BuildContext context) {
           ],
         ),
       ),
-      Padding(
-        padding: EdgeInsets.all(16),
-        child: Container(
-          width: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
-              color: Theme.of(context).primaryColorLight,
-              borderRadius: BorderRadius.circular(10)),
-          padding: EdgeInsets.all(16),
-          child: Text(
-            flatButtonCodeText,
-            textAlign: TextAlign.start,
-          ),
-        ),
-      ),
+      buildCodeExample(context, flatButtonCodeText),
       RichText(
         text: TextSpan(
           style: Theme.of(context).textTheme.bodyText2,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_book/screens/widget_screen.dart';
+import 'package:flutter_book/widgets/widget_code_block.dart';
 
 final imageCodeText = """
 Image(
@@ -90,20 +91,7 @@ Widget imageCode(BuildContext context) {
           ],
         ),
       ),
-      Padding(
-        padding: EdgeInsets.all(16),
-        child: Container(
-          width: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
-              color: Theme.of(context).primaryColorLight,
-              borderRadius: BorderRadius.circular(10)),
-          padding: EdgeInsets.all(16),
-          child: Text(
-            imageCodeText,
-            textAlign: TextAlign.start,
-          ),
-        ),
-      ),
+      buildCodeExample(context, imageCodeText),
       RichText(
         text: TextSpan(
           style: Theme.of(context).textTheme.bodyText2,
