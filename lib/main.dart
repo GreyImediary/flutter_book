@@ -3,8 +3,10 @@ import 'package:flutter_book/data/widget_data.dart';
 import 'package:flutter_book/screens/category_screen.dart';
 import 'package:flutter_book/screens/main_screen.dart';
 import 'package:flutter_book/widgets/material_widgets/flat_button.dart';
+import 'package:flutter_book/widgets/material_widgets/icon_button.dart';
 import 'package:flutter_book/widgets/material_widgets/image.dart';
 import 'package:flutter_book/widgets/material_widgets/outline_button.dart';
+import 'package:flutter_book/widgets/material_widgets/raised_button.dart';
 import 'package:flutter_book/widgets/material_widgets/tooltip.dart';
 
 void main() {
@@ -51,8 +53,10 @@ class MyApp extends StatelessWidget {
 
         '/Tooltip': (context) => TooltipWidget(),
         '/Image': (context) => ImageWidget(),
-        '/FlatButton': (content) => FlatButtonWidget(),
-        '/OutlineButton': (content) => OutlineButtonWidget(),
+        '/FlatButton': (context) => FlatButtonWidget(),
+        '/OutlineButton': (context) => OutlineButtonWidget(),
+        '/RaisedButton': (context) => RaisedButtonWidget(),
+        '/IconButton': (context) => IconButtonWidget()
       },
       title: 'Flutter Demo',
       theme: ThemeData(
