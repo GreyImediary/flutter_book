@@ -3,12 +3,6 @@ import 'package:flutter_book/data/widget_data.dart';
 import 'package:flutter_book/data/widget_routes.dart';
 import 'package:flutter_book/screens/category_screen.dart';
 import 'package:flutter_book/screens/main_screen.dart';
-import 'package:flutter_book/widgets/material_widgets/flat_button.dart';
-import 'package:flutter_book/widgets/material_widgets/icon_button.dart';
-import 'package:flutter_book/widgets/material_widgets/image.dart';
-import 'package:flutter_book/widgets/material_widgets/outline_button.dart';
-import 'package:flutter_book/widgets/material_widgets/raised_button.dart';
-import 'package:flutter_book/widgets/material_widgets/tooltip.dart';
 
 void main() {
   runApp(MyApp());
