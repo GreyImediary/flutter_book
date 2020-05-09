@@ -91,10 +91,7 @@ Widget switchButtonCode(BuildContext context) {
             TextSpan(
                 text: 'Note: ',
                 style: Theme.of(context).textTheme.bodyText1),
-            TextSpan(text: "Make sure a parent widget is "),
-            TextSpan(
-                text: 'Stateful widget ',
-                style: Theme.of(context).textTheme.bodyText1),
+            TextSpan(text: "Make sure a parent widget is a Stateful widget "),
             TextSpan(text: "and you provide "),
             TextSpan(
                 text: 'value property as boolean variable and it is changed under setState function.',
