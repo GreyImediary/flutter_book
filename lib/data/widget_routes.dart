@@ -3,6 +3,7 @@ import 'package:flutter_book/widgets/material_widgets/checkbox.dart';
 import 'package:flutter_book/widgets/material_widgets/icon_button.dart';
 import 'package:flutter_book/widgets/material_widgets/image.dart';
 import 'package:flutter_book/widgets/material_widgets/outline_button.dart';
+import 'package:flutter_book/widgets/material_widgets/radio.dart';
 import 'package:flutter_book/widgets/material_widgets/raised_button.dart';
 import 'package:flutter_book/widgets/material_widgets/slider.dart';
 import 'package:flutter_book/widgets/material_widgets/switch.dart';
@@ -19,4 +20,5 @@ final widgetRoutes = {
   '/Checkbox': (context) => CheckboxWidget(),
   '/Switch': (context) => SwitchWidget(),
   '/Slider': (context) => SliderWidget(),
+  '/Radio': (context) => RadioWidget(),
 };
