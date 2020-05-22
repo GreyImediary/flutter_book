@@ -1,5 +1,9 @@
 
+import 'package:flutter_book/widgets/assets_widgets/icon.dart';
+import 'package:flutter_book/widgets/material_widgets/circular_progress_indicator.dart';
+import 'package:flutter_book/widgets/material_widgets/linear_progress_indicator.dart';
 import 'package:flutter_book/widgets/material_widgets/checkbox.dart';
+import 'package:flutter_book/widgets/material_widgets/chip.dart';
 import 'package:flutter_book/widgets/material_widgets/icon_button.dart';
 import 'package:flutter_book/widgets/material_widgets/image.dart';
 import 'package:flutter_book/widgets/material_widgets/outline_button.dart';
@@ -21,4 +25,8 @@ final widgetRoutes = {
   '/Switch': (context) => SwitchWidget(),
   '/Slider': (context) => SliderWidget(),
   '/Radio': (context) => RadioWidget(),
+  '/Chip': (context) => ChipWidget(),
+  '/CircularProgressIndicator': (context) => CircularProgressIndicatorWidget(),
+  '/LinearProgressIndicator': (context) => LinearProgressIndicatorWidget(),
+  '/Icon': (context) => IconWidget(),
 };
