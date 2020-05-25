@@ -1,9 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_book/screens/widget_screen.dart';
 
 import '../widget_code_block.dart';
 
-final switchCodeText = """
+final cupSwitchCodeText = """
 Switch(
     value: stateValue,
     onChanged: (value) {
@@ -11,7 +12,7 @@ Switch(
     }
 )""";
 
-final switchStateCodeText = """
+final cupSwitchStateCodeText = """
 Switch(
     value: stateValue,
     onChanged: (value) {
@@ -21,12 +22,12 @@ Switch(
     }
 )""";
 
-Widget switchDescription(BuildContext context) {
+Widget cupSwitchDescription(BuildContext context) {
   return RichText(
     text: TextSpan(
       style: Theme.of(context).textTheme.bodyText2,
       children: [
-        TextSpan(text: 'A material design switch. '),
+        TextSpan(text: 'An iOS-style switch. '),
         TextSpan(text: 'The switch itself '),
         TextSpan(
           text: 'does not maintain any state. ',
@@ -50,7 +51,7 @@ Widget switchDescription(BuildContext context) {
   );
 }
 
-Widget switchButtonGoal(BuildContext context) {
+Widget cupSwitchButtonGoal(BuildContext context) {
   return RichText(
     text: TextSpan(
       style: Theme.of(context).textTheme.bodyText2,
@@ -64,7 +65,7 @@ Widget switchButtonGoal(BuildContext context) {
   );
 }
 
-Widget switchButtonCode(BuildContext context) {
+Widget cupSwitchButtonCode(BuildContext context) {
   return Column(
     children: <Widget>[
       RichText(
@@ -73,7 +74,7 @@ Widget switchButtonCode(BuildContext context) {
           children: [
             TextSpan(text: 'To implement switch you need to provide '),
             TextSpan(
-                text: 'Switch widget ',
+                text: 'CupertinoSwitch widget ',
                 style: Theme.of(context).textTheme.bodyText1),
             TextSpan(text: 'to a parent widget and provide '),
             TextSpan(
@@ -83,7 +84,7 @@ Widget switchButtonCode(BuildContext context) {
           ],
         ),
       ),
-      buildCodeExample(context, switchCodeText),
+      buildCodeExample(context, cupSwitchCodeText),
       RichText(
         text: TextSpan(
           style: Theme.of(context).textTheme.bodyText2,
@@ -99,17 +100,17 @@ Widget switchButtonCode(BuildContext context) {
           ],
         ),
       ),
-      buildCodeExample(context, switchStateCodeText),
+      buildCodeExample(context, cupSwitchStateCodeText),
     ],
   );
 }
 
-class SwitchExample extends StatefulWidget {
+class CupSwitchExample extends StatefulWidget {
   @override
-  _SwitchExampleState createState() => _SwitchExampleState();
+  _CupSwitchExampleState createState() => _CupSwitchExampleState();
 }
 
-class _SwitchExampleState extends State<SwitchExample> {
+class _CupSwitchExampleState extends State<CupSwitchExample> {
   String text = '';
   bool firstSwitchState = false;
 
@@ -123,7 +124,7 @@ class _SwitchExampleState extends State<SwitchExample> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                Switch(
+                CupertinoSwitch(
                     value: firstSwitchState,
                     onChanged: (value) {
                       setState(() {
@@ -136,9 +137,9 @@ class _SwitchExampleState extends State<SwitchExample> {
             ),
             Column(
               children: <Widget>[
-                Switch(
-                  value: false,
-                  onChanged: null
+                CupertinoSwitch(
+                    value: false,
+                    onChanged: null
                 ),
                 Text('Disabled switch')
               ],
@@ -150,17 +151,16 @@ class _SwitchExampleState extends State<SwitchExample> {
   }
 }
 
-class SwitchWidget extends StatelessWidget {
+class CupSwitchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WidgetScreen(
-        heroTag: 'Switch',
-        title: 'Switch',
-        description: switchDescription(context),
-        goal: switchButtonGoal(context),
-        code: switchButtonCode(context),
+        heroTag: 'CupertinoSwitch',
+        title: 'CupertinoSwitch',
+        description: cupSwitchDescription(context),
+        goal: cupSwitchButtonGoal(context),
+        code: cupSwitchButtonCode(context),
         tricks: null,
-        example: SwitchExample());
+        example: CupSwitchExample());
   }
 }
-

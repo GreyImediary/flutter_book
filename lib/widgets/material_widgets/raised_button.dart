@@ -4,11 +4,11 @@ import 'package:flutter_book/screens/widget_screen.dart';
 import '../widget_code_block.dart';
 
 final raisedButtonCodeText = """
-IconButton(
+RaisedButton(
   onPressed: () {
     /*some code*/
   },
-  icon: Icon(Icons.add),
+  child: Text("Raised Button"),
 )""";
 
 Widget raisedButtonDescription(BuildContext context) {
@@ -45,7 +45,7 @@ Widget raisedButtonGoal(BuildContext context) {
     text: TextSpan(
       style: Theme.of(context).textTheme.bodyText2,
       children: [
-        TextSpan(text: "The main goal of flat button (as well as other buttons) is to "),
+        TextSpan(text: "The main goal of raised button (as well as other buttons) is to "),
         TextSpan(
             text: 'trigger events ',
             style: Theme.of(context).textTheme.bodyText1),
