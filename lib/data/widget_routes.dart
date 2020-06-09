@@ -2,6 +2,7 @@
 import 'package:flutter_book/widgets/assets_widgets/icon.dart';
 import 'package:flutter_book/widgets/basics/flutter_logo.dart';
 import 'package:flutter_book/widgets/basics/placeholder.dart';
+import 'package:flutter_book/widgets/basics/row_widget.dart';
 import 'package:flutter_book/widgets/basics/text_widget.dart';
 import 'package:flutter_book/widgets/cupertino_widgets/cupertino_button.dart';
 import 'package:flutter_book/widgets/material_widgets/circular_progress_indicator.dart';
@@ -38,5 +39,6 @@ final widgetRoutes = {
   '/Placeholder': (context) => PlaceholderWidget(),
   '/FlutterLogo': (context) => FlutterLogoWidget(),
   '/CupertinoButton': (context) => CupButtonWidget(),
-  '/Text': (context) => TextWidgetExample()
+  '/Text': (context) => TextWidgetExample(),
+  '/Row': (context) => RowWidget()
 };
