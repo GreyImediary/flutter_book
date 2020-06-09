@@ -22,7 +22,8 @@ Widget circCode(BuildContext context) {
   return Column(
     children: <Widget>[
       Text(
-          'To implement circular progress indicator you just need to provide CircularProgressIndicator widget to a parent. You can also provide a value property if you need determinate progress indicator.'),
+        'To implement circular progress indicator you just need to provide CircularProgressIndicator widget to a parent. You can also provide a value property if you need determinate progress indicator.',
+      ),
       buildCodeExample(context, circCodeText)
     ],
   );
