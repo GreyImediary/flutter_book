@@ -1,4 +1,5 @@
 
+import 'package:flutter_book/widgets/animations/SlideTransition.dart';
 import 'package:flutter_book/widgets/animations/animated_opacity.dart';
 import 'package:flutter_book/widgets/animations/animated_size.dart';
 import 'package:flutter_book/widgets/assets_widgets/icon.dart';
@@ -48,5 +49,6 @@ final widgetRoutes = {
   '/CupertinoActivityIndicator': (context) => CupertinoIndicatorWidget(),
   '/CupertinoSlider': (context) => CupSliderWidget(),
   '/AnimatedOpacity': (context) => AnimOpacityWidget(),
-  '/AnimatedSize': (context) => AnimSizeWidget()
+  '/AnimatedSize': (context) => AnimSizeWidget(),
+  '/SlideTransition': (context) => SlideTransitionWidget(),
 };
