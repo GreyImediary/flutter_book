@@ -1,5 +1,6 @@
 
 import 'package:flutter_book/widgets/animations/animated_opacity.dart';
+import 'package:flutter_book/widgets/animations/animated_size.dart';
 import 'package:flutter_book/widgets/assets_widgets/icon.dart';
 import 'package:flutter_book/widgets/basics/flutter_logo.dart';
 import 'package:flutter_book/widgets/basics/placeholder.dart';
@@ -47,4 +48,5 @@ final widgetRoutes = {
   '/CupertinoActivityIndicator': (context) => CupertinoIndicatorWidget(),
   '/CupertinoSlider': (context) => CupSliderWidget(),
   '/AnimatedOpacity': (context) => AnimOpacityWidget(),
+  '/AnimatedSize': (context) => AnimSizeWidget()
 };
