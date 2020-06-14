@@ -1,5 +1,5 @@
 
-import 'package:flutter_book/widgets/animations/SlideTransition.dart';
+import 'package:flutter_book/widgets/animations/slide_transition.dart';
 import 'package:flutter_book/widgets/animations/animated_opacity.dart';
 import 'package:flutter_book/widgets/animations/animated_size.dart';
 import 'package:flutter_book/widgets/assets_widgets/icon.dart';
