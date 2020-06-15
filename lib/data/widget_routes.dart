@@ -1,4 +1,6 @@
 
+import 'package:flutter_book/widgets/animations/fade_transition.dart';
+import 'package:flutter_book/widgets/animations/rotation_transition.dart';
 import 'package:flutter_book/widgets/animations/slide_transition.dart';
 import 'package:flutter_book/widgets/animations/animated_opacity.dart';
 import 'package:flutter_book/widgets/animations/animated_size.dart';
@@ -51,4 +53,6 @@ final widgetRoutes = {
   '/AnimatedOpacity': (context) => AnimOpacityWidget(),
   '/AnimatedSize': (context) => AnimSizeWidget(),
   '/SlideTransition': (context) => SlideTransitionWidget(),
+  '/FadeTransition': (context) => FadeTransitionWidget(),
+  '/RotationTransition': (context) => RotationTransitionWidget(),
 };
