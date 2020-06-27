@@ -80,8 +80,9 @@ Widget chipCode(BuildContext context) {
 
 Widget chipExample(BuildContext context) {
   return Chip(
-    avatar: Icon(Icons.add),
-    label: Text('Chip example'),
+    avatar: Icon(Icons.add, color: Colors.white,),
+    label: Text('Chip example', style: TextStyle(color: Colors.white),),
+    backgroundColor: Theme.of(context).accentColor,
   );
 }
 
